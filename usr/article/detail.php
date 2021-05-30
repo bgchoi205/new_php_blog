@@ -30,7 +30,8 @@ $pageTitle = "게시물 상세, $id 번 게시물";
 <?php require_once __DIR__ . "/../head.php"; ?>
   <section>
     <a href="list.php">리스트</a>&ensp;
-    <a onclick="if( confirm('정말 삭제하시겠습니까?') == false )return false;" href="doDelete.php?id=<?=$id?>">삭제</a>
+    <a onclick="if( confirm('정말 삭제하시겠습니까?') == false )return false;" href="doDelete.php?id=<?=$id?>">삭제</a>&ensp;
+    <a href="modify.php?id=<?=$id?>">수정</a>
   </section>
   <hr>
   <div>
