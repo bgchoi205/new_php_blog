@@ -18,6 +18,26 @@ $rs = mysqli_query($dbConn, $sql);
 
 $article = mysqli_fetch_assoc($rs);
 
+$sqlBoard = "
+SELECT *
+FROM board AS B
+WHERE B.id = '${article['boardId']}'
+";
+
+$rsBoard = mysqli_query($dbConn, $sqlBoard);
+
+$board = mysqli_fetch_assoc($rsBoard);
+
+$sqlMember = "
+SELECT *
+FROM `member` AS M
+WHERE M.id = '${article['memberId']}'
+";
+
+$rsMember = mysqli_query($dbConn, $sqlMember);
+
+$member = mysqli_fetch_assoc($rsMember);
+
 ?>
 
 <?php
@@ -56,6 +76,8 @@ $pageTitle = "게시물 상세, $id 번 게시물";
     번호 : <?=$article['id']?><br>
     등록 : <?=$article['regDate']?><br>
     수정 : <?=$article['updateDate']?><br>
+    게시판 : <?=$board['name']?><br>
+    작성자 : <?=$member['nickName']?><br>
     제목 : <?=$article['title']?><br>
     내용 : <?=$article['body']?>
   </div>

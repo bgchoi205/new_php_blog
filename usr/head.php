@@ -13,7 +13,7 @@
   
   <?php if( isset($_SESSION['loginedMemberId']) ){ ?>
     <a onclick="if( confirm('로그아웃 하시겠습니까?') == false )return false;" href="../member/doLogout.php">로그아웃</a>
-
+    <hr>
   <?php }?>
 
   <?php if( !isset($_SESSION['loginedMemberId']) ){ ?>
