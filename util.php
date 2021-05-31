@@ -6,7 +6,7 @@ function jsAlert($msg){
   echo "</script>";
 }
 
-function jsLocarionReplaceExit($url, $msg = null){
+function jsLocationReplaceExit($url, $msg = null){
   if($msg){
     jsAlert($msg);
   }

@@ -32,7 +32,7 @@ $url = "detail.php?id=${id}";
 
 $msg = "${id} 번 게시물 작성 완료";
 
-jsLocarionReplaceExit($url, $msg);
+jsLocationReplaceExit($url, $msg);
 
 ?>
 

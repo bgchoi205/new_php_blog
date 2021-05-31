@@ -20,7 +20,7 @@ $url = "list.php";
 
 $msg = "${id} 번 게시물 삭제 완료";
 
-jsLocarionReplaceExit($url, $msg);
+jsLocationReplaceExit($url, $msg);
 
 ?>
 

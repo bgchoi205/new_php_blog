@@ -34,7 +34,7 @@ $url = "detail.php?id=${id}";
 
 $msg = "${id} 번 게시물 수정 완료";
 
-jsLocarionReplaceExit($url, $msg);
+jsLocationReplaceExit($url, $msg);
 
 ?>
 
