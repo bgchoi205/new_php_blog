@@ -41,6 +41,7 @@ title = '제목3',
 
 SELECT LAST_INSERT_ID();
 
+# member table 생성
 CREATE TABLE `member`(
   id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
   regDate DATETIME NOT NULL,
@@ -51,4 +52,64 @@ CREATE TABLE `member`(
   nickName VARCHAR(20) NOT NULL,
   email VARCHAR(100) NOT NULL
 );
+
+
+# test member 생성
+INSERT INTO `member`
+SET regDate = NOW(),
+updateDate = NOW(),
+loginId = 'admin1',
+loginPw = 'admin1',
+`name` = '철수',
+nickName = '파이리',
+email = 'fire@abc.com';
+
+INSERT INTO `member`
+SET regDate = NOW(),
+updateDate = NOW(),
+loginId = 'user1',
+loginPw = 'user1',
+`name` = '영희',
+nickName = '꼬부기',
+email = 'water@abc.com';
+
+INSERT INTO `member`
+SET regDate = NOW(),
+updateDate = NOW(),
+loginId = 'user2',
+loginPw = 'user2',
+`name` = '길동',
+nickName = '이상이상',
+email = 'green@abc.com';
+
+
+# board table 생성
+CREATE TABLE board(
+  id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  regDate DATETIME NOT NULL,
+  updateDate DATETIME NOT NULL,
+  `name` VARCHAR(20) NOT NULL,
+  `code` VARCHAR(20) NOT NULL
+);
+
+# test board 생성
+INSERT INTO board
+SET regDate = NOW(),
+updateDate = NOW(),
+`name` = '공지',
+`code` = 'notice';
+
+INSERT INTO board
+SET regDate = NOW(),
+updateDate = NOW(),
+`name` = '자유',
+`code` = 'free';
+
+INSERT INTO board
+SET regDate = NOW(),
+updateDate = NOW(),
+`name` = 'QnA',
+`code` = 'qna';
+
+
 

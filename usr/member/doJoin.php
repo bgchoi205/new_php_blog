@@ -28,6 +28,20 @@ $name = $_GET['name'];
 $nickName = $_GET['nickName'];
 $email = $_GET['email'];
 
+$sqlMember = "
+SELECT *
+FROM `member` AS M
+WHERE M.loginId = '${loginId}'
+";
+
+$rsMember = mysqli_query($dbConn, $sqlMember);
+
+$member = mysqli_fetch_assoc($rsMember);
+
+if( !empty($member) ){
+  jsHistoryBackExit("사용중인 아이디입니다.");
+}
+
 $sql = "
 INSERT INTO `member`
 SET regDate = NOW(),
