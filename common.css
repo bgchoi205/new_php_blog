@@ -6,6 +6,8 @@ div{
 table{
   border: 2px solid gray ;
   border-collapse: collapse;
+  text-align: center;
+  width:500px;
 }
 
 th, tr, td{

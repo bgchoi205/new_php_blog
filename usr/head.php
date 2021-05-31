@@ -12,7 +12,11 @@
   <hr>
   
   <?php if( isset($_SESSION['loginedMemberId']) ){ ?>
-    <a onclick="if( confirm('로그아웃 하시겠습니까?') == false )return false;" href="../member/doLogout.php">로그아웃</a>
+    <?php
+      $memberId = $_SESSION['loginedMemberId'];
+    ?>
+    <span><a onclick="if( confirm('로그아웃 하시겠습니까?') == false )return false;" href="../member/doLogout.php">로그아웃</a></span>&ensp;
+    <span><a href="../member/info.php?memberId=<?=$memberId?>">회원정보</a></span>
     <hr>
   <?php }?>
 
